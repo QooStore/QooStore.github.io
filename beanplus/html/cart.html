@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>장바구니</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+     integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/029e2dafc6.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/cartcss.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <style>
+        .bottom{
+             position:absolute; 
+             bottom: 0;
+             transform: translateY(50%);
+        }
+        .container {
+            padding: 0 auto;
+            width: 1300px;
+        }
+        .all1 {
+            width: 1300px;
+            margin: 0 auto;
+        }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="../index.html" class="headA">BEAN PLUS</a>
+            <nav class="headB">
+                <button type="button" onClick="location.href='./cart.html'" class="headC"><span class="fa fa-shopping-cart" title=""></span></button>
+                <button class="headC"><span class="fa fa-search" title="검색"></span></button>
+                <div class="nav1">
+                    <ul>
+                        <li><a href="./item_list.html">Coffee maker</a></li>
+                        <li><a href="./item_list.html">Cold brew</a></li>
+                        <li><a href="./item_list.html">Grinder</a></li>
+                        <li><a href="./item_list.html">Coffee</a></li>
+                        <li><a href="./item_list.html">Home-cafe</a></li>
+                        <li><a href="./item_list.html">Living</a></li>
+                        <li><a href="./item_list.html">Gift</a></li>
+                    </ul>
+                </div>
+                <div class="nav2">
+                    <ul>
+                        <li><a href="./sign_in.html">login</a></li>
+                        <li><a href="./sign_up.html">join</a></li>
+                        <li><a href="#">mypage</a></li>
+                    </ul>
+                </div>
+            </nav>  
+        </div>
+        <hr>
+    </header>
+        <div id="container">
+            <div id="contents">
+            <!-- 본문 시작 -->
+                <div class="sub_content">
+    <div class="content_box">
+        <div class="order_wrap">
+            <div class="order_tit">
+                <h2>장바구니</h2>
+            </div>
+                <div class="cart_cont">   
+                    <div class="cart_cont_list">
+                        <div class="order_table_type">
+                            <table>
+                                <colgroup>
+                                    <col style="width:5%">  <!-- 체크박스 -->
+                                    <col >					<!-- 상품명/옵션 -->
+                                    <col style="width:7%">  <!-- 수량 -->
+                                    <col style="width:13%"> <!-- 상품금액 -->
+                                    <col style="width:13%"> <!-- 합계금액 -->
+                                    <col style="width:13%"> <!-- 배송비 -->
+                                </colgroup>
+                                <thead>
+                                <tr>
+                                    <th>
+                                        <div class="form_element">
+                                            <input type="checkbox" id="allCheck1" class="gd_select_all_goods" checked="checked">
+                                            <label for="allCheck1" class="check_s on"></label>
+                                        </div>
+                                    </th>
+                                    <th>상품/옵션 정보</th>
+                                    <th>수량</th>
+                                    <th>상품금액</th>
+                                    <th>합계금액</th>
+                                    <th>배송비</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class="td_chk">
+                                        <div class="form_element">
+                                            <input type="checkbox" id="cartSno1" value="" checked="checked">
+                                            <label for="cartSno1_735926" class="check_s on"></label>
+                                        </div>
+                                    </td>
+                                    <td class="td_left">
+                                        <div class="pick_add_cont">
+                                            <span class="pick_add_img">
+                                                <a href="#"><img src="../images/cofee_01.jpg" width="40" alt="[BEST] 갓볶은 맛있는 원두커피 200g" title="[BEST] 갓볶은 맛있는 원두커피 200g" class="middle"></a>
+                                            </span>
+                                            <div class="pick_add_info">
+                                                <em><a href="#">[BEST] 갓볶은 맛있는 원두커피 200g</a></em>    
+                                                <div class="pick_option_box">
+                                                    <span class="text_type_cont">분쇄도 선택 : 원두(분쇄안함) </span>
+                                                    <span class="text_type_cont">원두 선택 : 1.예가체프 200g [★BEST★] <strong>(+3,000원)</strong></span>
+                                                </div>
+                                            </div>
+                                        </div>    
+                                        <!-- //pick_add_cont -->
+                                    </td>
+                                    <td class="td_order_amount">                                    
+                                    <strong class="order_goods_num">1개</strong>
+                                    </td>
+                                    <td>
+                                        <strong class="order_sum_txt price">10,800원</strong>
+                                        <p class="add_currency"></p>
+                                    </td>
+                                    <td>
+                                        <strong class="order_sum_txt">10,800원</strong>
+                                        <p class="add_currency"></p>
+                                    </td>
+                                    <td class="td_delivery" rowspan="1">
+                                        기본 - 금액별배송비<br>
+                                        3,500원    
+                                        <br>
+                                        (택배-선결제)
+                                    </td>
+                                </tr>
+                                </tbody>    
+                            </table>
+                        </div>   
+                    </div>
+                    <!-- //cart_cont_list -->
+                </form>
+                <div class="price_sum">
+                    <div class="price_sum_cont">
+                        <div class="price_sum_list">
+                            <dl>
+                                <dt>총 <strong id="totalGoodsCnt">1</strong> 개의 상품금액 </dt>
+                                <dd><strong id="totalGoodsPrice">10,800</strong>원</dd>
+                            </dl>
+                            <span class="plus_icon">&#43;</span>
+                            <dl>
+                                <dt>배송비</dt>
+                                <dd><strong id="totalDeliveryCharge">3,500</strong>원</dd>
+                            </dl>
+                            <span class="equal_icon">&#61;</span>
+                            <dl class="price_total">
+                                <dt>합계</dt>
+                                <dd><strong id="totalSettlePrice">14,300</strong>원
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <!-- //price_sum_cont -->
+                </div>
+                <!-- //price_sum -->    
+                <div class="btn_order_box">
+                    <span class="btn_left_box">
+                        <button type="button" class="btn_order_choice_del" onclick="">선택 상품 삭제</button>
+                    </span>
+                    <span class="btn_right_box">
+                        <button type="button" class="btn_order_choice_buy" onclick="location.href='done.html'">선택 상품 주문</button>
+                    </span>
+                </div>
+                <!-- //btn_order_box -->    
+            </div>
+            <!-- //cart_cont -->
+        </div>
+        <!-- //order_wrap -->
+    </div>
+    <!-- //content_box -->   
+                </div>
+                <!-- //sub_content -->
+            </div>
+            <!-- //본문 끝 contents -->
+        </div>
+        <!-- //container -->
+        <div class="all1">
+        <footer>
+            <div class="bottom">
+                <div class="container" style="padding:0;">
+                    <ul class="menu">
+                        <li><a href="#">회사소개</a></li>
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">광고·제휴</a></li>
+                        <li><a href="#">사업자회원</a></li>
+                        <li><a href="#">상품후기</a></li>
+                    </ul>
+        
+                    <div class="menu2">
+                        <h2>cs center</h2>
+                        <h3>1661-5025<br></h3>
+                        <p>평일 : 09:30 am - 04:30 pm | 점심 : 01:00 pm - 02:00 pm <br></p>
+                        <p>주말 및 공휴일은 휴무입니다. 문의게시판을 이용해주세요.</p>
+                        <hr>
+                        <p>KEB하나은행 : 341-890056-09504 | 예금주 : (주)휴레드</p>
+                    </div>
+                    <div class="menu3">
+                        <h2>BEAN PLUS</h2>
+                        <p>주식회사 휴레드 | 대표 : 강수열 | 고객센터 : 1661-5025</p>
+                        <p>경기도 안양시 만안구 시민대로 34 (성일디지털타워) 502호</p>
+                        <p>사업자등록번호 : 114-86-73989 <a href="#menu3" style="text-decoration:none; font-size:10px; color:black;" >[사업자확인]</a> | 개인정보관리책임자 : 유대오</p>
+                        <p>통신판매업신고 : 제 2012-경기안양-00716 | 호스팅제공 : 엔에이치엔고도(주)</p>
+                        <button type="button" onClick="location.href='q_n_a.html'" class="btn">문의하기</button>
+                        <button type="button" class="btn2" onclick="window.scrollTo(0,0)";>Go Up</button>
+                    </div>
+                    <div class="menu4">
+                        <hr style="width:1261px">
+                        <h7><b style="color:black;">개인정보처리방침</b> |</h7>
+                            <h8> 이용약관 |</h8>
+                            <h9 style="padding-right:30px;"> 이용안내 </h9>
+                                Copyright &copy; www.beanplus.kr. All rights reserved.
+                            <a href="https://www.facebook.com/huredbeanplus/"><img src="../images/sns1.png" alt="facebook"
+                                    style="padding-left:50px;width:30px; height:30px;"></a>
+                            <a href="https://www.instagram.com/beanplus_/"><img src="../images/sns2.png" alt="instagram"
+                                    style="padding-left:10px; width:30px; height:30px;"></a>
+                            <a href="https://pf.kakao.com/_EDYxcxl"><img src="../images/sns3.png" alt="kakaotalk"
+                                    style="padding-left:10px; width:30px; height:30px;"></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
